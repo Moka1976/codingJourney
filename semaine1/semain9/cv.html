@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Mon CV</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                color: #333;
+            }
+            h1 {
+                color: #2c3e50;
+            }
+            ul{
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                padding: 0;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Theon Greggoy</h1>
+        <button onclick="changerCouleur()">Change ma couleur</button>
+        
+        <p id="message"></p>
+
+        <p>Ceci est une présentation de mon CV</p>
+        <h2>A propos de moi</h2>
+        <p>je suis en formation de developpement chez cludaIA  Academy </p>
+        <h2>Mes compétences</h2>
+        <ul>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>GitHub</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <a href="mailto : mykisembe@gmail.com">M'envoyer un émail ?</a>
+        <script>
+            function changerCouleur() {
+                document.body.style.backgroundColor = "lightblue";
+                document.getElementById("message").innerText = "Tu as cliqué sur le bouton !"
+            }
+        </script>
+    </body>
+</html>

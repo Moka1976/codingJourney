@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>Ma To-Dp List</title>
+    </head>
+    <script>
+        function ajouterTâche(){
+            var text = document.getElementById("nouvelleTâche").value;
+            var liste = document.getElementById("listeTâche");
+
+            var nouvelElement = document.createElement("li");
+            nouvelElement.innerText = text;
+
+            nouvelElement.onclick = function() {
+                nouvelElement.style.textDecoration = "line-through";
+            };
+
+            liste.appendChild(nouvelElement);
+
+            document.getElementById("nouvelleTâche").value = "";
+        }
+    </script>
+    <body>
+        <h1>Ma liste de Tâches</h1>
+        <input type="text" id="nouvelleTâche" placeholder="Ajouter une tâche">
+        <button onclick="ajouterTâche()">Ajouter</button>
+        <ul id="listeTâche"></ul>
+    </body>
+</html>
