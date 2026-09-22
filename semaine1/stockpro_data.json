@@ -1,0 +1,31 @@
+{
+    "produits": [
+        {
+            "nom": "Cahiers",
+            "prix_achat": 500,
+            "prix_vente": 750,
+            "quantite": 12
+        },
+        {
+            "nom": "Stylo",
+            "prix_achat": 200,
+            "prix_vente": 300,
+            "quantite": 50
+        },
+        {
+            "nom": "cartable",
+            "prix_achat": 850,
+            "prix_vente": 1250,
+            "quantite": 19
+        }
+    ],
+    "ventes": [
+        {
+            "produit": "Cahiers",
+            "quantite": 18,
+            "total": 13500,
+            "benefice": 4500,
+            "date": "2026-09-22T11:54:39.222555"
+        }
+    ]
+}

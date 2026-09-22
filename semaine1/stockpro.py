@@ -1,3 +1,4 @@
+import json 
 from datetime import datetime
 
 produits = [
@@ -201,6 +202,7 @@ def rechercher_produit():
 
             trouve = True
 
+    
     if trouve ==False:
             print("♦ Aucun produit trouvé.")
 
@@ -231,6 +233,24 @@ def afficher_tableau_de_bord():
         print("📎 Bénéfice total :", benefice_total)
 
         print("====================")
+
+def sauvegarde_donnees():
+    donnees = {
+        "produits": produits,
+        "ventes": []
+    }
+
+    for vente in ventes:
+        vente_copie = vente.copy()
+        vente_copie["date"] = vente["date"].isoformat()
+
+    donnees["ventes"].append(vente_copie)
+    
+
+    with open("stockpro_data.json", "w",
+    encoding="utf-8") as fichier:
+        json.dump(donnees, fichier, ensure_ascii=False, indent=4)
+        print("⏺ Données sauvegardées avec succès !")
 
 while True:
     print("============ STOCKPRO ============")
@@ -273,5 +293,8 @@ while True:
         print("Merci d'avoir utilisé StockPro !")
         break
 
-    else :
+    else:
         print("Choix invalide !")
+
+
+sauvegarde_donnees()
